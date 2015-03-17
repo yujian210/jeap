@@ -1,0 +1,42 @@
+
+<head>
+<meta charset="utf-8">
+<script src="//tinymce.cachefly.net/4.1/tinymce.min.js"></script>
+<script>
+	tinymce.init({selector:'textarea'});
+</script>
+
+
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+
+
+</head>
+
+<form action="/add" method="POST" class="form-horizontal" role="form" style="width:600px;margin:20px;">
+
+{% csrf_token %} 
+
+
+
+  <div class="form-group">
+    <label >标题</label>
+    <input type="text" class="form-control" name="title" placeholder="标题">
+  </div>
+  <div class="form-group">
+    <label >姓名</label>
+    <input type="text" class="form-control" name="name" placeholder="姓名">
+  </div>
+  <div class="form-group">
+    <label >内容</label>
+    <textarea name="content"></textarea> 
+  </div>
+
+<input type="submit" name="submit" value="发表"  class="btn btn-danger"/>
+</form>
+
+
+

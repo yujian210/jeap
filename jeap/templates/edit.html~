@@ -1,0 +1,17 @@
+|<meta charset="utf-8">
+
+
+
+<form action="/edit_save/{{a.id}}" method="POST">
+
+{% csrf_token %} 
+
+<table>
+{{form}}
+</table>
+
+</form>
+
+<form action="" method="POST">
+<input type="submit" value ="发送" name="submit" /> 
+</form>
